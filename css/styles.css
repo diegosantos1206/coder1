@@ -141,7 +141,6 @@ img {
 .contenedorQS {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: quienesSomos;
   background-color: #eedd9f;
 }
@@ -185,7 +184,6 @@ img {
   background-color: #6f2829;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: queHacemosId;
 }
 
@@ -230,7 +228,7 @@ img {
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-      grid-template-areas: "nav nav" "header header" "quienesSomos quienesSomos" "queHacemosId queHacemosId" "marcasConfian marcasConfian";
+      grid-template-areas: "nav" "header" "quienesSomos" "queHacemosId" "marcasConfian";
 }
 
 #fotografia {
@@ -244,7 +242,6 @@ img {
 #marcasConfian {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: marcasConfian;
   background-color: #eedd9f;
   color: #6f2829;
@@ -377,6 +374,20 @@ h3 {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .tiktoks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 /*BLOQUE DE RESPONSIVE ANTOJADDOS STUDIO*/
@@ -404,15 +415,4 @@ h3 {
             align-items: center;
   }
 }
-
-/*DECLARANDO VARIABLES PARA DESAFÍO 12
-$mujer: linear-gradient(to right, #6f2829, pink);
-$hombre: linear-gradient(to right, #6f2829, skyblue);
-
-if $sexo==="hombre"
-
-
-.fondoContacto {
-    background-image: linear-gradient(to right, #6f2829, yellow);
-}*/
 /*# sourceMappingURL=styles.css.map */

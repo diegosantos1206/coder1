@@ -185,11 +185,11 @@ img {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas:
-    "nav nav"
-    "header header"
-    "quienesSomos quienesSomos"
-    "queHacemosId queHacemosId"
-    "marcasConfian marcasConfian";
+    "nav"
+    "header"
+    "quienesSomos"
+    "queHacemosId"
+    "marcasConfian";
 }
 
 
@@ -315,6 +315,13 @@ h3{
         align-items: center;
         justify-content: center;
     }
+
+    .tiktoks{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 
@@ -343,14 +350,3 @@ h3{
     align-items: center;
     }
 }
-
-/*DECLARANDO VARIABLES PARA DESAFÍO 12
-$mujer: linear-gradient(to right, #6f2829, pink);
-$hombre: linear-gradient(to right, #6f2829, skyblue);
-
-if $sexo==="hombre"
-
-
-.fondoContacto {
-    background-image: linear-gradient(to right, #6f2829, yellow);
-}*/
