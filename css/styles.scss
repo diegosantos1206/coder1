@@ -1,0 +1,356 @@
+/*CÓDIGO EN GENERAL*/
+
+header {
+    background-color: #6f2829;
+    grid-area: header;
+}
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center !important;
+}
+
+p {
+    color: #6f2829;
+}
+
+h1 {
+    color: #eedd9f;
+}
+
+form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 400px;
+    background-color: #E7E7E7;
+    margin: 0 auto;
+    border-style: dashed;
+    border-color: burlywood;
+}
+
+/*DECLARANDO VARIABLES PARA EL DESAFÍO SASS*/
+$tamaño: 5px;
+$amarillo-web: #eedd9f;
+$rojo-web: #6f2829;
+
+nav {
+    background-color: $amarillo-web;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: $tamaño * 14;
+    padding-right: $tamaño * 4;
+    grid-area: nav;
+}
+
+.tiktoks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoNav {
+    width: 65px;
+    height: 65px;
+    margin: $tamaño;
+    transition: all 3s;
+}
+
+.logoNav:hover{
+transform: rotateY(180deg);
+}
+
+ul li a:hover{
+    font-weight: bold;
+}
+
+.bannerIndex{
+    transition: all 2s;
+}
+
+.bannerIndex:hover{
+transform: scale(0.95,0.95);
+}
+
+ul {
+    list-style: none;
+    font-size: 0px;
+    width: max-content;
+    position: relative;
+}
+
+li {
+    display: inline;
+    width: 25%;
+    font-size: 16px;
+    padding-right: 30px;
+}
+
+
+ul li a{
+    text-decoration: none;
+    color: #6f2829;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+
+.guiaLima {
+    background-color: #eedd9f;
+}
+
+.fondoContacto {
+    background-image: linear-gradient(to right, #6f2829, yellow);
+}
+
+.bloqueFormularioAC {
+    background-color: #eedd9f;
+    color:#6f2829
+}
+
+/*CODIGO DE BIM DESAFÍO*/
+
+.contenedorQS {
+    grid-area: quienesSomos;
+    background-color: #eedd9f;
+}
+
+.contenedorQS__div {
+    display: grid;
+    grid-template-areas: 
+    "titulo foto"
+    "parrafo foto";
+    align-items: center;
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.contenedorQS__titulo {
+    grid-area: titulo;
+    color: #6f2829;
+    }
+    
+.contenedorQS__parrafo {
+    grid-area: parrafo;
+    padding: 30px 30px;
+}
+
+.contenedorQS__foto {
+    grid-area: foto;
+}
+
+/*CODIGO DE BIM DESAFÍO COMPLEMENTARIO*/
+
+.contenedorQH {
+    background-color: $rojo-web;
+    grid-area: queHacemosId;
+}
+
+.contenedorQH__div {
+    display: grid;
+    grid-template-areas:
+    "fauna tituQueHace"
+    "fauna textoQueHace";
+    align-items: center;
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.contenedorQH__titulo {
+    color: #eedd9f;
+    padding: 30px 30px;
+    grid-area: tituQueHace;
+}
+
+/*APLICANDO EL EXTEND*/
+.contenedorQH__parrafo {
+    @extend.contenedorQH__titulo;
+    grid-area: textoQueHace;
+}
+
+.contenedorQH__foto {
+    grid-area: fauna;
+}
+
+
+/*BLOQUE DE CÓDIGO PARA EL GRID INDEX*/
+
+.containerIndex {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    "nav nav"
+    "header header"
+    "quienesSomos quienesSomos"
+    "queHacemosId queHacemosId"
+    "marcasConfian marcasConfian";
+}
+
+
+#fotografia{
+    background-color: #eedd9f;
+}
+
+#video{
+    background-color: bisque;
+}
+
+#marcasConfian {
+    grid-area: marcasConfian;
+    background-color: #eedd9f;
+    color: #6f2829;
+}
+
+.imagenesTop5{
+width: 60%;
+}
+
+h3{
+    color: #6f2829;
+}
+
+/*BLOQUE DE CÓDIGO PARA EL GRID ANTOJADDOS STUDIO*/
+
+.container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    "nav nav"
+    "header header"
+    "fotografia fotografia"
+    "video video";
+}
+
+.containerFoto {
+    display: grid;
+    grid-template-areas: 
+    "tituFoto fotoStudio"
+    "textoFoto fotoStudio";
+    align-items: center;
+}
+
+#tituFoto{
+    grid-area: tituFoto;
+    color: #6f2829;
+}
+
+#textoFoto{
+    grid-area: textoFoto;
+    padding: 20px 20px;
+}
+
+.fotoStudio{
+    grid-area: fotoStudio;
+}
+
+.containerVideo{
+    display: grid;
+    grid-template-areas: 
+    "videoStudio tituVideo"
+    "videoStudio textoVideo";
+    align-items: center;
+}
+
+#tituVideo{
+    grid-area: tituVideo;
+    color: #6f2829;
+}
+
+#textoVideo{
+    grid-area: textoVideo;
+    padding: 30px 30px;
+}
+
+.videoStudio{
+    grid-area: videoStudio;
+}
+
+.titulosRojo{
+    color: #6f2829;
+}
+
+.tituloAmarillo{
+    color: #eedd9f;
+}
+/*BLOQUE DE RESPONSIVE*/
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .contenedorQS__div {
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "parrafo parrafo"
+        "foto foto";
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 600px) {
+    .contenedorQS__div {
+        display: grid;
+        background-color: burlywood;
+        grid-template-areas: 
+        "titulo titulo"
+        "parrafo parrafo"
+        "foto foto";
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedorQH__div {
+        display: grid;
+        grid-template-areas: 
+        "tituQueHace tituQueHace"
+        "textoQueHace textoQueHace"
+        "fauna fauna";
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/*BLOQUE DE RESPONSIVE ANTOJADDOS STUDIO*/
+
+
+@media only screen and (max-width: 768px) {
+    .containerFoto {
+        display: grid;
+        grid-template-areas: 
+        "tituFoto tituFoto"
+        "textoFoto textoFoto"
+        "fotoStudio fotoStudio";
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .containerVideo{
+    display: grid;
+    grid-template-areas: 
+    "tituVideo tituVideo"
+    "textoVideo textoVideo"
+    "videoStudio videoStudio";
+    align-items: center;
+    }
+}
+
+/*DECLARANDO VARIABLES PARA DESAFÍO 12
+$mujer: linear-gradient(to right, #6f2829, pink);
+$hombre: linear-gradient(to right, #6f2829, skyblue);
+
+if $sexo==="hombre"
+
+
+.fondoContacto {
+    background-image: linear-gradient(to right, #6f2829, yellow);
+}*/
