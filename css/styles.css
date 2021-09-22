@@ -2,24 +2,17 @@
 /*CÓDIGO EN GENERAL*/
 header {
   background-color: #6f2829;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: header;
-}
+  grid-area: header; }
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  text-align: center !important;
-}
+  text-align: center !important; }
 
 p {
-  color: #6f2829;
-}
+  color: #6f2829; }
 
 h1 {
-  color: #eedd9f;
-}
+  color: #eedd9f; }
 
 form {
   padding-top: 30px;
@@ -28,391 +21,225 @@ form {
   background-color: #E7E7E7;
   margin: 0 auto;
   border-style: dashed;
-  border-color: burlywood;
-}
+  border-color: burlywood; }
 
 /*DECLARANDO VARIABLES PARA EL DESAFÍO SASS*/
 nav {
   background-color: #eedd9f;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 70px;
   padding-right: 20px;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: nav;
-}
+  grid-area: nav; }
 
 .tiktoks {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
 
 .logoNav {
   width: 65px;
   height: 65px;
   margin: 5px;
-  -webkit-transition: all 3s;
-  transition: all 3s;
-}
+  transition: all 3s; }
 
 .logoNav:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
+  transform: rotateY(180deg); }
 
 ul li a:hover {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .bannerIndex {
-  -webkit-transition: all 2s;
-  transition: all 2s;
-}
+  transition: all 2s; }
 
 .bannerIndex:hover {
-  -webkit-transform: scale(0.95, 0.95);
-          transform: scale(0.95, 0.95);
-}
+  transform: scale(0.95, 0.95); }
 
 ul {
   list-style: none;
   font-size: 0px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
-  position: relative;
-}
+  position: relative; }
 
 li {
   display: inline;
   width: 25%;
   font-size: 16px;
-  padding-right: 30px;
-}
+  padding-right: 30px; }
 
 ul li a {
   text-decoration: none;
   color: #6f2829;
-  text-align: center;
-}
+  text-align: center; }
 
 img {
-  width: 100%;
-}
+  width: 100%; }
 
 .guiaLima {
-  background-color: #eedd9f;
-}
+  background-color: #eedd9f; }
 
 .fondoContacto {
-  background-image: -webkit-gradient(linear, left top, right top, from(#6f2829), to(yellow));
-  background-image: linear-gradient(to right, #6f2829, yellow);
-}
+  background-image: linear-gradient(to right, #6f2829, yellow); }
 
 .bloqueFormularioAC {
   background-color: #eedd9f;
-  color: #6f2829;
-}
+  color: #6f2829; }
 
 /*CODIGO DE BIM DESAFÍO*/
 .contenedorQS {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: quienesSomos;
-  background-color: #eedd9f;
-}
+  background-color: #eedd9f; }
 
 .contenedorQS__div {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "titulo foto" "parrafo foto";
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: 4fr 5fr;
-      grid-template-columns: 4fr 5fr;
-  -ms-grid-rows: 1fr 3fr;
-      grid-template-rows: 1fr 3fr;
-}
+  grid-template-areas: "titulo foto" "parrafo foto";
+  align-items: center;
+  grid-template-columns: 4fr 5fr;
+  grid-template-rows: 1fr 3fr; }
 
 .contenedorQS__titulo {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: titulo;
-  color: #6f2829;
-}
+  color: #6f2829; }
 
 .contenedorQS__parrafo {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: parrafo;
-  padding: 30px 30px;
-}
+  padding: 30px 30px; }
 
 .contenedorQS__foto {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: foto;
-}
+  grid-area: foto; }
 
 /*CODIGO DE BIM DESAFÍO COMPLEMENTARIO*/
 .contenedorQH {
   background-color: #6f2829;
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: queHacemosId;
-}
+  grid-area: queHacemosId; }
 
 .contenedorQH__div {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "fauna tituQueHace" "fauna textoQueHace";
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: 5fr 4fr;
-      grid-template-columns: 5fr 4fr;
-  -ms-grid-rows: 1fr 3fr;
-      grid-template-rows: 1fr 3fr;
-}
+  grid-template-areas: "fauna tituQueHace" "fauna textoQueHace";
+  align-items: center;
+  grid-template-columns: 5fr 4fr;
+  grid-template-rows: 1fr 3fr; }
 
 .contenedorQH__titulo, .contenedorQH__parrafo {
   color: #eedd9f;
   padding: 30px 30px;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: tituQueHace;
-}
+  grid-area: tituQueHace; }
 
 /*APLICANDO EL EXTEND*/
 .contenedorQH__parrafo {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: textoQueHace;
-}
+  grid-area: textoQueHace; }
 
 .contenedorQH__foto {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: fauna;
-}
+  grid-area: fauna; }
 
 /*BLOQUE DE CÓDIGO PARA EL GRID INDEX*/
 .containerIndex {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-      grid-template-areas: "nav" "header" "quienesSomos" "queHacemosId" "marcasConfian";
-}
+  grid-template-columns: auto auto;
+  grid-template-areas: "nav" "header" "quienesSomos" "queHacemosId" "marcasConfian"; }
 
 #fotografia {
-  background-color: #eedd9f;
-}
+  background-color: #eedd9f; }
 
 #video {
-  background-color: bisque;
-}
+  background-color: bisque; }
 
 #marcasConfian {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
   grid-area: marcasConfian;
   background-color: #eedd9f;
-  color: #6f2829;
-}
+  color: #6f2829; }
 
 .imagenesTop5 {
-  width: 60%;
-}
+  width: 60%; }
 
 h3 {
-  color: #6f2829;
-}
+  color: #6f2829; }
 
 /*BLOQUE DE CÓDIGO PARA EL GRID ANTOJADDOS STUDIO*/
 .container2 {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-      grid-template-areas: "nav nav" "header header" "fotografia fotografia" "video video";
-}
+  grid-template-columns: auto auto;
+  grid-template-areas: "nav nav" "header header" "fotografia fotografia" "video video"; }
 
 .containerFoto {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "tituFoto fotoStudio" "textoFoto fotoStudio";
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+  grid-template-areas: "tituFoto fotoStudio" "textoFoto fotoStudio";
+  align-items: center; }
 
 #tituFoto {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: tituFoto;
-  color: #6f2829;
-}
+  color: #6f2829; }
 
 #textoFoto {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: textoFoto;
-  padding: 20px 20px;
-}
+  padding: 20px 20px; }
 
 .fotoStudio {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: fotoStudio;
-}
+  grid-area: fotoStudio; }
 
 .containerVideo {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "videoStudio tituVideo" "videoStudio textoVideo";
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+  grid-template-areas: "videoStudio tituVideo" "videoStudio textoVideo";
+  align-items: center; }
 
 #tituVideo {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: tituVideo;
-  color: #6f2829;
-}
+  color: #6f2829; }
 
 #textoVideo {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: textoVideo;
-  padding: 30px 30px;
-}
+  padding: 30px 30px; }
 
 .videoStudio {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: videoStudio;
-}
+  grid-area: videoStudio; }
 
 .titulosRojo {
-  color: #6f2829;
-}
+  color: #6f2829; }
 
 .tituloAmarillo {
-  color: #eedd9f;
-}
+  color: #eedd9f; }
 
 /*BLOQUE DE RESPONSIVE*/
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .contenedorQS__div {
-    display: -ms-grid;
     display: grid;
-        grid-template-areas: "titulo titulo" "parrafo parrafo" "foto foto";
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
+    grid-template-areas: "titulo titulo" "parrafo parrafo" "foto foto";
+    align-items: center;
+    justify-content: center; } }
 
 @media only screen and (min-width: 360px) and (max-width: 600px) {
   .contenedorQS__div {
-    display: -ms-grid;
     display: grid;
     background-color: burlywood;
-        grid-template-areas: "titulo titulo" "parrafo parrafo" "foto foto";
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
+    grid-template-areas: "titulo titulo" "parrafo parrafo" "foto foto";
+    align-items: center;
+    justify-content: center; } }
 
 @media only screen and (max-width: 768px) {
   .contenedorQH__div {
-    display: -ms-grid;
     display: grid;
-        grid-template-areas: "tituQueHace tituQueHace" "textoQueHace textoQueHace" "fauna fauna";
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+    grid-template-areas: "tituQueHace tituQueHace" "textoQueHace textoQueHace" "fauna fauna";
+    align-items: center;
+    justify-content: center; }
   .tiktoks {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; } }
 
 /*BLOQUE DE RESPONSIVE ANTOJADDOS STUDIO*/
 @media only screen and (max-width: 768px) {
   .containerFoto {
-    display: -ms-grid;
     display: grid;
-        grid-template-areas: "tituFoto tituFoto" "textoFoto textoFoto" "fotoStudio fotoStudio";
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
+    grid-template-areas: "tituFoto tituFoto" "textoFoto textoFoto" "fotoStudio fotoStudio";
+    align-items: center;
+    justify-content: center; } }
 
 @media only screen and (max-width: 768px) {
   .containerVideo {
-    display: -ms-grid;
     display: grid;
-        grid-template-areas: "tituVideo tituVideo" "textoVideo textoVideo" "videoStudio videoStudio";
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-/*# sourceMappingURL=styles.css.map */
+    grid-template-areas: "tituVideo tituVideo" "textoVideo textoVideo" "videoStudio videoStudio";
+    align-items: center; } }

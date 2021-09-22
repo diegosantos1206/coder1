@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Food Blog Lima Perú">
     <meta name="keywords" content="foodblog, foodies, food, comida, reviews, peru">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./scss/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,140 +17,133 @@
 </head>
 
 <body>
-    <div class="containerIndex">
-        <!--BARRA DE NAVEGACIÓN DE LA WEB-->
-        <nav class="sticky-top">
-            <a href="./index.html"><img src="./resources/Arojo.png" class="logoNav" alt="logo">
+    <div class="bloqueNav">
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><img src="./resources/menu.png" alt="botonmenu"></label>
+        <nav class="menu">
+            <ul>
+                <li><a href="./index.html"><img src="./resources/Arojo.png" class="logoNav" alt="logo"></a></li>
+                <li><a href="./pages/studio.html">Antojaddos Studio </a></li>
+                <li><a href="./pages/club.html">Antojaddos Club</a></li>
+                <li><a href="./pages/blog.html">Blog</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--RESTO DEL CUERPO DE LA WEB CON GRIDS-->
+    <header>
+        <br>
+        <div>
+            <h1>Antojaddos, fooblog & lifestyle</h1>
+        </div>
+        <img src="./resources/antojaddosbanner2.png" class="bannerIndex" alt="banner">
+    </header>
+    <div class="contenedorQS">
+        <div class="contenedorQS__div">
+            <h2 class="contenedorQS__titulo">¿Quiénes somos?</h2>
+            <p class="contenedorQS__parrafo">Antojaddos es un foodblog que nace en el 2020 a raíz de la Pandemia,
+                formado por Diego y
+                Daniela, 2 amantes de la buena comida y de las escapadas para satisfacer esos antojitos del dia a
+                día. Ahora que las restricciones del COVID están siendo más flexibles, vamos probando muchos más
+                lugares para que conozcas la experiencia desde tu hogar y decidas si vale la pena visitarlo o no.
+            </p>
+            <img src="./resources/radissonred2.jpg" class="contenedorQS__foto" alt="fotoRedRadisson">
+        </div>
+    </div>
+    <div class="contenedorQH">
+        <div class="contenedorQH__div">
+            <h2 class="contenedorQH__titulo">¿Qué hacemos?</h2>
+            <p class="contenedorQH__parrafo">Visitamos restaurantes, hoteles TOP y los mejores points del Perú y del
+                mundo para
+                que te antojes con nosotros y te asegures un día de diversión ya sea solo, en pareja, con amigos o
+                en familia.
+            </p>
+            <img src="./resources/fauna.jpg" class="contenedorQH__foto" alt="restaurantefauna">
+        </div>
+    </div>
+
+
+    <!--BLOQUE DE TIKTOKS QUE TIENEN ESTRUCTURA DE FLEXBOX-->
+    <section id="marcasConfian">
+        <br>
+        <div>
+            <h2>Marcas que confían en nosotros</h2>
+            <section class="tiktoks">
+                <div>
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@antojaddos/video/6987932158413360390"
+                        data-video-id="6987932158413360390" style="max-width: 405px;min-width: 325px;">
+                        <section> <a target="_blank" title="@antxojaddos"
+                                href="https://www.tiktok.com/@antojaddos">@antojaddos</a>
+                            <p>Mariva 🥘 ¡Buffet a S&#47;59 por persona en el Hotel Sheraton! 🤩 <a title="foodies"
+                                    target="_blank" href="https://www.tiktok.com/tag/foodies">##foodies</a> <a
+                                    title="lima" target="_blank" href="https://www.tiktok.com/tag/lima">##lima</a>
+                                <a title="peru" target="_blank" href="https://www.tiktok.com/tag/peru">##peru</a> <a
+                                    title="food" target="_blank" href="https://www.tiktok.com/tag/food">##food</a>
+                                <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a> <a
+                                    title="parati" target="_blank" href="https://www.tiktok.com/tag/parati">##parati</a>
+                                <a title="viral" target="_blank" href="https://www.tiktok.com/tag/viral">##viral</a>
+                                <a title="hoteles" target="_blank"
+                                    href="https://www.tiktok.com/tag/hoteles">##hoteles</a> <a title="luxury"
+                                    target="_blank" href="https://www.tiktok.com/tag/luxury">##luxury</a>
+                            </p> <a target="_blank" title="♬ original sound - antojaddos"
+                                href="https://www.tiktok.com/music/original-sound-6987931998933371654">♬ original
+                                sound
+                                -
+                                antojaddos</a>
+                        </section>
+                    </blockquote>
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
+                <div>
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@antojaddos/video/7001533652416908549"
+                        data-video-id="7001533652416908549" style="max-width: 405px;min-width: 325px;">
+                        <section> <a target="_blank" title="@antojaddos"
+                                href="https://www.tiktok.com/@antojaddos">@antojaddos</a>
+                            <p>Desayuno buffet en el AC Hotel 🤩🍳 <a title="foodies" target="_blank"
+                                    href="https://www.tiktok.com/tag/foodies">##foodies</a> <a title="miraflores"
+                                    target="_blank" href="https://www.tiktok.com/tag/miraflores">##miraflores</a> <a
+                                    title="lima" target="_blank" href="https://www.tiktok.com/tag/lima">##lima</a>
+                                <a title="hotel" target="_blank" href="https://www.tiktok.com/tag/hotel">##hotel</a>
+                                <a title="luxury" target="_blank" href="https://www.tiktok.com/tag/luxury">##luxury</a>
+                                <a title="foodieslima" target="_blank"
+                                    href="https://www.tiktok.com/tag/foodieslima">##foodieslima</a> <a title="viral"
+                                    target="_blank" href="https://www.tiktok.com/tag/viral">##viral</a> <a title="fyp"
+                                    target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a> <a title="fyi"
+                                    target="_blank" href="https://www.tiktok.com/tag/fyi">##fyi</a>
+                            </p> <a target="_blank" title="♬ sonido original - antojaddos"
+                                href="https://www.tiktok.com/music/sonido-original-7001533493821885190">♬ sonido
+                                original - antojaddos</a>
+                        </section>
+                    </blockquote>
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
 
                 <div>
-                    <ul>
-                        <li><a href="./pages/studio.html">Antojaddos Studio </a></li>
-                        <li><a href="./pages/club.html">Antojaddos Club</a></li>
-                        <li><a href="./pages/blog.html">Blog</a></li>
-                        <li><a href="./pages/contacto.html">Contacto</a></li>
-                    </ul>
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@antojaddos/video/6980874145387089157"
+                        data-video-id="6980874145387089157" style="max-width: 405px;min-width: 325px;">
+                        <section> <a target="_blank" title="@antojaddos"
+                                href="https://www.tiktok.com/@antojaddos">@antojaddos</a>
+                            <p>Rivolta, ¡Pastas en box! 😯🍝🥡 <a title="pastas" target="_blank"
+                                    href="https://www.tiktok.com/tag/pastas">##pastas</a> <a title="foodies"
+                                    target="_blank" href="https://www.tiktok.com/tag/foodies">##foodies</a> <a
+                                    title="foodporn" target="_blank"
+                                    href="https://www.tiktok.com/tag/foodporn">##foodporn</a> <a title="miraflores"
+                                    target="_blank" href="https://www.tiktok.com/tag/miraflores">##miraflores</a> <a
+                                    title="lima" target="_blank" href="https://www.tiktok.com/tag/lima">##lima</a>
+                                <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a> <a
+                                    title="parati" target="_blank" href="https://www.tiktok.com/tag/parati">##parati</a>
+                            </p> <a target="_blank" title="♬ sonido original - antojaddos"
+                                href="https://www.tiktok.com/music/sonido-original-6980873971701009158">♬ sonido
+                                original - antojaddos</a>
+                        </section>
+                    </blockquote>
+                    <script async src="https://www.tiktok.com/embed.js"></script>
                 </div>
-        </nav>
-
-        <!--RESTO DEL CUERPO DE LA WEB CON GRIDS-->
-        <header>
-            <br>
-            <div>
-                <h1>Antojaddos, fooblog & lifestyle</h1>
-            </div>
-            <img src="./resources/antojaddosbanner2.png" class="bannerIndex" alt="banner">
-        </header>
-        <div class="contenedorQS">
-            <div class="contenedorQS__div">
-                <h2 class="contenedorQS__titulo">¿Quiénes somos?</h2>
-                <p class="contenedorQS__parrafo">Antojaddos es un foodblog que nace en el 2020 a raíz de la Pandemia,
-                    formado por Diego y
-                    Daniela, 2 amantes de la buena comida y de las escapadas para satisfacer esos antojitos del dia a
-                    día. Ahora que las restricciones del COVID están siendo más flexibles, vamos probando muchos más
-                    lugares para que conozcas la experiencia desde tu hogar y decidas si vale la pena visitarlo o no.
-                </p>
-                <img src="./resources/radissonred2.jpg" class="contenedorQS__foto" alt="fotoRedRadisson">
-            </div>
+            </section>
         </div>
-        <div class="contenedorQH">
-            <div class="contenedorQH__div">
-                <h2 class="contenedorQH__titulo">¿Qué hacemos?</h2>
-                <p class="contenedorQH__parrafo">Visitamos restaurantes, hoteles TOP y los mejores points del Perú y del
-                    mundo para
-                    que te antojes con nosotros y te asegures un día de diversión ya sea solo, en pareja, con amigos o
-                    en familia.
-                </p>
-                <img src="./resources/fauna.jpg" class="contenedorQH__foto" alt="restaurantefauna">
-            </div>
-        </div>
-
-
-        <!--BLOQUE DE TIKTOKS QUE TIENEN ESTRUCTURA DE FLEXBOX-->
-        <section id="marcasConfian">
-            <br>
-            <div>
-                <h2>Marcas que confían en nosotros</h2>
-                <section class="tiktoks">
-                    <div>
-                        <blockquote class="tiktok-embed"
-                            cite="https://www.tiktok.com/@antojaddos/video/6987932158413360390"
-                            data-video-id="6987932158413360390" style="max-width: 405px;min-width: 325px;">
-                            <section> <a target="_blank" title="@antxojaddos"
-                                    href="https://www.tiktok.com/@antojaddos">@antojaddos</a>
-                                <p>Mariva 🥘 ¡Buffet a S&#47;59 por persona en el Hotel Sheraton! 🤩 <a title="foodies"
-                                        target="_blank" href="https://www.tiktok.com/tag/foodies">##foodies</a> <a
-                                        title="lima" target="_blank" href="https://www.tiktok.com/tag/lima">##lima</a>
-                                    <a title="peru" target="_blank" href="https://www.tiktok.com/tag/peru">##peru</a> <a
-                                        title="food" target="_blank" href="https://www.tiktok.com/tag/food">##food</a>
-                                    <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a> <a
-                                        title="parati" target="_blank"
-                                        href="https://www.tiktok.com/tag/parati">##parati</a>
-                                    <a title="viral" target="_blank" href="https://www.tiktok.com/tag/viral">##viral</a>
-                                    <a title="hoteles" target="_blank"
-                                        href="https://www.tiktok.com/tag/hoteles">##hoteles</a> <a title="luxury"
-                                        target="_blank" href="https://www.tiktok.com/tag/luxury">##luxury</a>
-                                </p> <a target="_blank" title="♬ original sound - antojaddos"
-                                    href="https://www.tiktok.com/music/original-sound-6987931998933371654">♬ original
-                                    sound
-                                    -
-                                    antojaddos</a>
-                            </section>
-                        </blockquote>
-                        <script async src="https://www.tiktok.com/embed.js"></script>
-                    </div>
-                    <div>
-                        <blockquote class="tiktok-embed"
-                            cite="https://www.tiktok.com/@antojaddos/video/7001533652416908549"
-                            data-video-id="7001533652416908549" style="max-width: 405px;min-width: 325px;">
-                            <section> <a target="_blank" title="@antojaddos"
-                                    href="https://www.tiktok.com/@antojaddos">@antojaddos</a>
-                                <p>Desayuno buffet en el AC Hotel 🤩🍳 <a title="foodies" target="_blank"
-                                        href="https://www.tiktok.com/tag/foodies">##foodies</a> <a title="miraflores"
-                                        target="_blank" href="https://www.tiktok.com/tag/miraflores">##miraflores</a> <a
-                                        title="lima" target="_blank" href="https://www.tiktok.com/tag/lima">##lima</a>
-                                    <a title="hotel" target="_blank" href="https://www.tiktok.com/tag/hotel">##hotel</a>
-                                    <a title="luxury" target="_blank"
-                                        href="https://www.tiktok.com/tag/luxury">##luxury</a>
-                                    <a title="foodieslima" target="_blank"
-                                        href="https://www.tiktok.com/tag/foodieslima">##foodieslima</a> <a title="viral"
-                                        target="_blank" href="https://www.tiktok.com/tag/viral">##viral</a> <a
-                                        title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a> <a
-                                        title="fyi" target="_blank" href="https://www.tiktok.com/tag/fyi">##fyi</a>
-                                </p> <a target="_blank" title="♬ sonido original - antojaddos"
-                                    href="https://www.tiktok.com/music/sonido-original-7001533493821885190">♬ sonido
-                                    original - antojaddos</a>
-                            </section>
-                        </blockquote>
-                        <script async src="https://www.tiktok.com/embed.js"></script>
-                    </div>
-
-                    <div>
-                        <blockquote class="tiktok-embed"
-                            cite="https://www.tiktok.com/@antojaddos/video/6980874145387089157"
-                            data-video-id="6980874145387089157" style="max-width: 405px;min-width: 325px;">
-                            <section> <a target="_blank" title="@antojaddos"
-                                    href="https://www.tiktok.com/@antojaddos">@antojaddos</a>
-                                <p>Rivolta, ¡Pastas en box! 😯🍝🥡 <a title="pastas" target="_blank"
-                                        href="https://www.tiktok.com/tag/pastas">##pastas</a> <a title="foodies"
-                                        target="_blank" href="https://www.tiktok.com/tag/foodies">##foodies</a> <a
-                                        title="foodporn" target="_blank"
-                                        href="https://www.tiktok.com/tag/foodporn">##foodporn</a> <a title="miraflores"
-                                        target="_blank" href="https://www.tiktok.com/tag/miraflores">##miraflores</a> <a
-                                        title="lima" target="_blank" href="https://www.tiktok.com/tag/lima">##lima</a>
-                                    <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a> <a
-                                        title="parati" target="_blank"
-                                        href="https://www.tiktok.com/tag/parati">##parati</a>
-                                </p> <a target="_blank" title="♬ sonido original - antojaddos"
-                                    href="https://www.tiktok.com/music/sonido-original-6980873971701009158">♬ sonido
-                                    original - antojaddos</a>
-                            </section>
-                        </blockquote>
-                        <script async src="https://www.tiktok.com/embed.js"></script>
-                    </div>
-                </section>
-            </div>
-            <br>
-        </section>
+        <br>
+    </section>
     </div>
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">

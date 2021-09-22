@@ -1,0 +1,26 @@
+{
+  "name": "antojaddos",
+  "version": "1.0.0",
+  "description": "Es una página web de un foodblog que actualmente existe en Instagram. Fue creado con la idea de darle un aspecto más profesional al foodblog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegosantos1206/coder1.git"
+  },
+  "author": "diegosantos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegosantos1206/coder1/issues"
+  },
+  "homepage": "https://github.com/diegosantos1206/coder1#readme",
+  "devDependencies": {
+    "node": "^16.9.1",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contáctanos para conocer más de Antojaddos Foodblog">
   <meta name="keywords" content="contacto, antojaddos, foodblog, información">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../scss/styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,20 +17,19 @@
 
 <body>
   <section class="fondoContacto">
-    <nav class="sticky-top">
-      <div>
-        <a href="../index.html"><img src="../resources/Arojo.png" class="logoNav" alt="logo">
-      </div>
-
-      <div>
+    <div class="bloqueNav">
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu"><img src="../resources/menu.png" alt="botonmenu"></label>
+      <nav class="menu">
         <ul>
+          <li><a href="../index.html"><img src="../resources/Arojo.png" class="logoNav" alt="logo"></a></li>
           <li><a href="./studio.html">Antojaddos Studio </a></li>
           <li><a href="./club.html">Antojaddos Club</a></li>
           <li><a href="./blog.html">Blog</a></li>
           <li><a href="./contacto.html">Contacto</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <header>
       <br>
       <h1>Contáctanos</h1>

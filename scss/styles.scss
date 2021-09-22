@@ -34,17 +34,6 @@ $tamaño: 5px;
 $amarillo-web: #eedd9f;
 $rojo-web: #6f2829;
 
-nav {
-    background-color: $amarillo-web;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: $tamaño * 14;
-    padding-right: $tamaño * 4;
-    grid-area: nav;
-}
-
 .tiktoks{
     display: flex;
     flex-direction: row;
@@ -55,7 +44,6 @@ nav {
 .logoNav {
     width: 65px;
     height: 65px;
-    margin: $tamaño;
     transition: all 3s;
 }
 
@@ -72,28 +60,51 @@ ul li a:hover{
 }
 
 .bannerIndex:hover{
-transform: scale(0.95,0.95);
+    transform: scale(0.95,0.95);
 }
 
-ul {
+.bloqueNav{
+    width: 100%;
+    background: $amarillo-web;
+}
+
+#btn-menu{
+    display:none;
+}
+
+div label{
+    display:none;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+div label:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.menu ul{
+    margin:0;
     list-style: none;
-    font-size: 0px;
-    width: max-content;
-    position: relative;
+    padding: 0;
+    display:flex;
+    align-items: center;
 }
 
-li {
-    display: inline;
-    width: 25%;
-    font-size: 16px;
-    padding-right: 30px;
+.menu li{
+    flex-grow: 1;
 }
 
+.menu li:hover{
+    background: rgba(0,0,0,0.3)
+}
 
-ul li a{
+.menu li a{
+    display:block;
+    padding: 10px 15px;
+    color: $rojo-web;
     text-decoration: none;
-    color: #6f2829;
-    text-align: center;
 }
 
 img {
@@ -102,15 +113,15 @@ img {
 
 
 .guiaLima {
-    background-color: #eedd9f;
+    background-color: $amarillo-web;
 }
 
 .fondoContacto {
-    background-image: linear-gradient(to right, #6f2829, yellow);
+    background-image: linear-gradient(to right, $rojo-web, $amarillo-web);
 }
 
 .bloqueFormularioAC {
-    background-color: #eedd9f;
+    background-color: $amarillo-web;
     color:#6f2829
 }
 
@@ -194,7 +205,7 @@ img {
 
 
 #fotografia{
-    background-color: #eedd9f;
+    background-color: $amarillo-web;
 }
 
 #video{
@@ -292,10 +303,10 @@ h3{
     }
 }
 
-@media only screen and (min-width: 360px) and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .contenedorQS__div {
         display: grid;
-        background-color: burlywood;
+        background-color: $amarillo-web;
         grid-template-areas: 
         "titulo titulo"
         "parrafo parrafo"
@@ -321,6 +332,26 @@ h3{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+    }
+
+    div label {
+        display:block;
+    }
+
+    .menu{
+        position:absolute;
+        background: $amarillo-web;
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.5s;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .menu{
+        margin: 0;
     }
 }
 
