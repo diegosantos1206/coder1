@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*CÓDIGO EN GENERAL*/
+/*DECLARANDO VARIABLES*/
 header {
   background-color: #6f2829;
   -ms-grid-row: 2;
@@ -8,17 +9,25 @@ header {
   grid-area: header;
 }
 
-body {
-  font-family: 'Ubuntu', sans-serif;
-  text-align: center !important;
-}
-
 p {
   color: #6f2829;
 }
 
 h1 {
   color: #eedd9f;
+}
+
+/*USANDO BUCLE*/
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
 }
 
 form {
@@ -31,7 +40,11 @@ form {
   border-color: burlywood;
 }
 
-/*DECLARANDO VARIABLES PARA EL DESAFÍO SASS*/
+body {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center !important;
+}
+
 .tiktoks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,8 +61,8 @@ form {
 }
 
 .logoNav {
-  width: 65px;
   height: 65px;
+  width: 65px;
   -webkit-transition: all 3s;
   transition: all 3s;
 }
@@ -84,8 +97,8 @@ ul li a:hover {
 
 div label {
   display: none;
-  width: 40px;
   height: 40px;
+  width: 40px;
   padding: 10px;
 }
 
@@ -112,15 +125,15 @@ div label:hover {
           flex-grow: 1;
 }
 
-.menu li:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-
 .menu li a {
   display: block;
   padding: 10px 15px;
   color: #6f2829;
   text-decoration: none;
+}
+
+.menu li:hover {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 img {
@@ -141,7 +154,6 @@ img {
   color: #6f2829;
 }
 
-/*CODIGO DE BIM DESAFÍO*/
 .contenedorQS {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -183,7 +195,6 @@ img {
   grid-area: foto;
 }
 
-/*CODIGO DE BIM DESAFÍO COMPLEMENTARIO*/
 .contenedorQH {
   background-color: #6f2829;
   -ms-grid-row: 4;
@@ -212,7 +223,6 @@ img {
   grid-area: tituQueHace;
 }
 
-/*APLICANDO EL EXTEND*/
 .contenedorQH__parrafo {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
@@ -336,7 +346,11 @@ h3 {
   color: #eedd9f;
 }
 
-/*BLOQUE DE RESPONSIVE*/
+.margenParrafo {
+  margin: 0 50px 0 50px;
+}
+
+/*BLOQUE DE RESPONSIVE INDEX*/
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .contenedorQS__div {
     display: -ms-grid;
@@ -378,6 +392,20 @@ h3 {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .menu {
+    position: absolute;
+    background: #eedd9f;
+    width: 100%;
+    margin-left: -100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .tiktoks {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -394,20 +422,6 @@ h3 {
   }
   div label {
     display: block;
-  }
-  .menu {
-    position: absolute;
-    background: #eedd9f;
-    width: 100%;
-    margin-left: -100%;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  .menu ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   #btn-menu:checked ~ .menu {
     margin: 0;

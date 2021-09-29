@@ -1,22 +1,27 @@
 /*CÓDIGO EN GENERAL*/
 
+/*DECLARANDO VARIABLES*/
+$amarillo-web: #eedd9f;
+$rojo-web: #6f2829;
+
 header {
-    background-color: #6f2829;
+    background-color: $rojo-web;
     grid-area: header;
 }
 
-
-body {
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center !important;
-}
-
 p {
-    color: #6f2829;
+    color: $rojo-web;
 }
 
 h1 {
-    color: #eedd9f;
+    color: $amarillo-web;
+}
+
+/*USANDO BUCLE*/
+@for $i from 1 through 3 {
+    h#{$i} {
+        font-size: 40px - ($i*4);
+    }
 }
 
 form {
@@ -29,10 +34,10 @@ form {
     border-color: burlywood;
 }
 
-/*DECLARANDO VARIABLES PARA EL DESAFÍO SASS*/
-$tamaño: 5px;
-$amarillo-web: #eedd9f;
-$rojo-web: #6f2829;
+body {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center !important;
+}
 
 .tiktoks{
     display: flex;
@@ -41,9 +46,13 @@ $rojo-web: #6f2829;
     align-items: center;
 }
 
+@mixin sizes($width, $height){
+    height: $height;
+    width: $width;
+}
+
 .logoNav {
-    width: 65px;
-    height: 65px;
+    @include sizes(65px, 65px);
     transition: all 3s;
 }
 
@@ -74,8 +83,7 @@ ul li a:hover{
 
 div label{
     display:none;
-    width: 40px;
-    height: 40px;
+    @include sizes(40px, 40px);
     padding: 10px;
 }
 
@@ -94,17 +102,16 @@ div label:hover {
 
 .menu li{
     flex-grow: 1;
+         a{
+            display:block;
+            padding: 10px 15px;
+            color: $rojo-web;
+            text-decoration: none;
+        }
 }
 
 .menu li:hover{
     background: rgba(0,0,0,0.3)
-}
-
-.menu li a{
-    display:block;
-    padding: 10px 15px;
-    color: $rojo-web;
-    text-decoration: none;
 }
 
 img {
@@ -122,14 +129,12 @@ img {
 
 .bloqueFormularioAC {
     background-color: $amarillo-web;
-    color:#6f2829
+    color: $rojo-web;
 }
-
-/*CODIGO DE BIM DESAFÍO*/
 
 .contenedorQS {
     grid-area: quienesSomos;
-    background-color: #eedd9f;
+    background-color: $amarillo-web;
 }
 
 .contenedorQS__div {
@@ -144,7 +149,7 @@ img {
 
 .contenedorQS__titulo {
     grid-area: titulo;
-    color: #6f2829;
+    color: $rojo-web;
     }
     
 .contenedorQS__parrafo {
@@ -155,8 +160,6 @@ img {
 .contenedorQS__foto {
     grid-area: foto;
 }
-
-/*CODIGO DE BIM DESAFÍO COMPLEMENTARIO*/
 
 .contenedorQH {
     background-color: $rojo-web;
@@ -174,12 +177,11 @@ img {
 }
 
 .contenedorQH__titulo {
-    color: #eedd9f;
+    color: $amarillo-web;
     padding: 30px 30px;
     grid-area: tituQueHace;
 }
 
-/*APLICANDO EL EXTEND*/
 .contenedorQH__parrafo {
     @extend.contenedorQH__titulo;
     grid-area: textoQueHace;
@@ -214,8 +216,8 @@ img {
 
 #marcasConfian {
     grid-area: marcasConfian;
-    background-color: #eedd9f;
-    color: #6f2829;
+    background-color: $amarillo-web;
+    color: $rojo-web;
 }
 
 .imagenesTop5{
@@ -223,7 +225,7 @@ width: 60%;
 }
 
 h3{
-    color: #6f2829;
+    color: $rojo-web;
 }
 
 /*BLOQUE DE CÓDIGO PARA EL GRID ANTOJADDOS STUDIO*/
@@ -248,7 +250,7 @@ h3{
 
 #tituFoto{
     grid-area: tituFoto;
-    color: #6f2829;
+    color: $rojo-web;
 }
 
 #textoFoto{
@@ -270,7 +272,7 @@ h3{
 
 #tituVideo{
     grid-area: tituVideo;
-    color: #6f2829;
+    color: $rojo-web;
 }
 
 #textoVideo{
@@ -283,13 +285,18 @@ h3{
 }
 
 .titulosRojo{
-    color: #6f2829;
+    color: $rojo-web;
 }
 
 .tituloAmarillo{
-    color: #eedd9f;
+    color: $amarillo-web;
 }
-/*BLOQUE DE RESPONSIVE*/
+
+.margenParrafo{
+    margin: 0 50px 0 50px;
+}
+
+/*BLOQUE DE RESPONSIVE INDEX*/
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
     .contenedorQS__div {
@@ -327,6 +334,17 @@ h3{
         justify-content: center;
     }
 
+    .menu{
+        position:absolute;
+        background: $amarillo-web;
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.5s;
+            ul{
+                flex-direction: column;
+            }
+    }
+
     .tiktoks{
         display: flex;
         flex-direction: column;
@@ -336,18 +354,6 @@ h3{
 
     div label {
         display:block;
-    }
-
-    .menu{
-        position:absolute;
-        background: $amarillo-web;
-        width: 100%;
-        margin-left: -100%;
-        transition: all 0.5s;
-    }
-
-    .menu ul{
-        flex-direction: column;
     }
 
     #btn-menu:checked ~ .menu{
